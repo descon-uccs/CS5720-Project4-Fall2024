@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{amsmath}
+
+\geometry{margin=1in}
+
+\title{Minimum Spanning Tree Analysis}
+\author{Graduate Algorithms - Project 4}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+This report presents the analysis of 30 graphs categorized into three types. The tasks include:
+\begin{itemize}
+    \item Counting nodes and edges.
+    \item Classifying graphs as sparse or dense.
+    \item Computing the Minimum Spanning Tree (MST) using Prim's and Kruskal's algorithms.
+    \item Empirically analyzing and comparing algorithm performance.
+\end{itemize}
+
+\section*{Deliverable 1: Node and Edge Counts}
+The following table summarizes the number of nodes and edges for each graph:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Graph} & \textbf{Nodes} & \textbf{Edges} \\
+\midrule
+% Insert rows here; example:
+Type 1 - t1\_graph\_0.csv & 10 & 17 \\
+Type 1 - t1\_graph\_1.csv & 20 & 106 \\
+% ... Add all rows
+\bottomrule
+\end{tabular}
+\caption{Node and edge counts for all graphs.}
+\label{tab:node_edge_counts}
+\end{table}
+
+\section*{Deliverable 2: Graph Sparsity or Density}
+The classification of each graph type as sparse or dense is determined based on edge density:
+
+\[
+\text{Density} = \frac{|E|}{|V|(|V| - 1) / 2}
+\]
+
+Results indicate:
+\begin{itemize}
+    \item \textbf{Type 1}: Sparse
+    \item \textbf{Type 2}: Dense
+    \item \textbf{Type 3}: Sparse
+\end{itemize}
+
+\section*{Deliverable 3: MST Weights}
+The total weights of the MSTs computed using Prim's and Kruskal's algorithms are summarized below. The plots visualize the differences across graph types.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{mst-weights-type-1.png}
+\caption{MST Weights for Type 1 Graphs.}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{mst-weights-type-2.png}
+\caption{MST Weights for Type 2 Graphs.}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{mst-weights-type-3.png}
+\caption{MST Weights for Type 3 Graphs.}
+\end{figure}
+
+\section*{Deliverable 4: Timing Analysis}
+The empirical timing results for Prim's and Kruskal's algorithms are shown below. The plots highlight the performance differences based on graph density and type.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{timing-analysis-type-1.png}
+\caption{Timing Analysis for Type 1 Graphs.}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{timing-analysis-type-2.png}
+\caption{Timing Analysis for Type 2 Graphs.}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{timing-analysis-type-3.png}
+\caption{Timing Analysis for Type 3 Graphs.}
+\end{figure}
+
+\section*{Conclusion}
+This project demonstrates the implementation and analysis of MST algorithms across graph types. The results align with theoretical expectations, and empirical findings provide deeper insights into algorithm performance.
+
+\end{document}
